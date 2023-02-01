@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.content_1 {
+  padding: 0 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  margin-top: 150px;
+  height: 60px;
+  padding: 0 50px;
+  background: pink;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 60px;
+  position: relative;
+  top: 0;
+}
+
+.button_1 {
+  background: pink;
+  color: #fff;
+  box-shadow: 0 5px 1px palevioletred;
+  transition-property: background;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+.button_1:hover {
+  background: lightblue;
+  top: 2px;
+  box-shadow: 0 3px 1px palevioletred;
+}
+
+.button_2 {
+  background: pink;
+  color: #fff;
+  box-shadow: 0 5px 1px palevioletred;
+  transition-property: background, padding;
+  transition-duration: 1s, 2s;
+  transition-delay: 0.5s, 0s;
+  transition-timing-function: ease, cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.button_2:hover {
+  padding: 0 100px;
+  background: lightblue;
+}
+
+.content_2 {
+  margin: 50px 0 0 0;
+  padding: 100px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #000;
+  position: relative;
+  left: 0;
+  animation: black-circle 2s linear infinite alternate running 0s forwards, red-circle 4s linear infinite alternate running 1s forwards;
+}
+
+.circle:hover {
+  animation-play-state: paused, paused;
+}
+
+@keyframes black-circle {
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 0%;
+  }
+  100% {
+    left: 500px;
+  }
+}
+@keyframes red-circle {
+  0% {
+    background: #000;
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: #000;
+  }
+}
